@@ -123,17 +123,18 @@ systemctl enable NetworkManager
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# install dotfiles
-cd /home/$USER_NAME
-rm -rf .dotfiles
-git clone --bare "${USER_REPO}" ".dotfiles"
-git --git-dir=/home/${USER_NAME}/.dotfiles --work-tree=/home/${USER_NAME} checkout -f
-git --git-dir=/home/${USER_NAME}/.dotfiles --work-tree=/home/${USER_NAME} config --local status.showUntrackedFiles no
-
 # install aur helper
 [ -f /etc/sudoers.pacnew ] && cp /etc/sudoers.pacnew /etc/sudoers # Just in case
 echo "%wheel ALL=(ALL) NOPASSWD: ALL #ARCHINSTALL" >> /etc/sudoers
 su ${USER_NAME} <<EOUSER
+  # install dotfiles
+  cd /home/$USER_NAME
+  rm -rf .dotfiles
+  git clone --bare "${USER_REPO}" ".dotfiles"
+  git --git-dir=/home/${USER_NAME}/.dotfiles --work-tree=/home/${USER_NAME} checkout -f
+  git --git-dir=/home/${USER_NAME}/.dotfiles --work-tree=/home/${USER_NAME} config --local status.showUntrackedFiles no
+  
+  # install yay
   cd /home/${USER_NAME}
   git clone https://aur.archlinux.org/yay.git
   cd yay
