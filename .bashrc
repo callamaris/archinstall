@@ -6,7 +6,5 @@
 PS1='[\u@\h \W]\$'
 
 # alias
-alias ls='ls --color=auto'
-alias cfg='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 

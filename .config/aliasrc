@@ -1,0 +1,11 @@
+#!/bin/sh
+
+alias e="$EDITOR"
+alias v="$EDITOR"
+alias f="$FILE"
+alias g="git"
+alias c="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias ls="ls -hN --color=auto --group-directories-first"
+
+
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" vi="nvim"
