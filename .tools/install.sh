@@ -141,6 +141,11 @@ su ${USER_NAME} <<EOUSER
   makepkg --noconfirm -si 
   cd ..
   rm -rf yay
+
+  # install apps
+  cd /home/${USER_NAME}
+  bash .tools/update.sh
+
 EOUSER
 
 # set sudoers file
