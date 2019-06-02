@@ -4,3 +4,7 @@
 ,tig,an ncurses git repository browser
 ,fzf,fuzzy finder tool
 ,w3m,minimal terminal web browser
+,xorg-server, used by dwm
+,libxinerama,used by dwm
+,libxft,used by dwm
+,libx11,used by dwm
