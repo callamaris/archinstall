@@ -8,7 +8,7 @@ TIME_ZONE="Europe/Berlin"
 LANG_CONF="de_DE"
 LC_KEYMAP="de-latin1-nodeadkeys"
 USER_NAME="${COMP_NAME}"
-USER_REPO="http://dennis:8080/arch"
+USER_REPO="https://github.com/callamaris/archinstall"
 
 #customizing ##########################################################
 while [ "${ASK_OK}" != "y" ]; do
