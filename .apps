@@ -1,1 +1,6 @@
-,htop,task manager
+,htop,system and process manager
+,neovim,the better vim
+,nnn,minimal file browser
+,tig,an ncurses git repository browser
+,fzf,fuzzy finder tool
+,w3m,minimal terminal web browser
